@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Experimental project with CSS3 animations" />
+  <meta name="keywords" content="HAL9000, CSS3, animation" />
+  <meta name="author" content="Fernando Guillen http://fernandoguillen.info" />
+  
+  <title>Computer Malfunction / CSS3 animation experiment</title>
+  
+  <style type="text/css">
+    body {
+      background-color: #9e2300;
+    }
+     
+    .hal9000 { 
+      letter-spacing: -4px;
+      color: white;
+      font-size: 100px;
+      text-transform: uppercase;
+      font-family: Arial;
+      width: 700px;
+      text-align: center;
+      margin: 0 auto;
+      padding-top: 100px;
+    }
+    
+    
+    @-webkit-keyframes shadowing{
+      0% { 
+        text-shadow: 0px 0px 10px rgba(255,255,255,0.8); 
+        opacity: 1
+      }
+      
+      
+      20% { 
+        text-shadow: 0px 0px 40px rgba(255,255,255,0.8); 
+        opacity: 1
+      }
+      
+      
+      100% { 
+        text-shadow: 0px 0px 10px rgba(255,255,255,0.8); 
+        opacity:0.1;
+      }
+    }
+    
+    .hal9000 {
+      animation: shadowing 1s infinite;
+      -moz-animation: shadowing 1s infinite; /* Firefox */
+      -webkit-animation: shadowing 1s infinite; /* Safari and Chrome */
+    }
+    
+    footer {
+      position: absolute;
+      bottom: 0px;
+      width: 90%;
+      text-align: right;
+      font-family: Arial;
+      font-size: 10px;
+    }
+    
+    footer p,
+    footer a {
+      color: #621702;
+    }
+    
+    footer:hover p,
+    footer:hover a {
+      color: #471102;
+    }
+    
+    
+  </style>
+</head>
+<body>
+  <h1 class="hal9000">Computer Malfunction</h1>
+  <footer>
+    <p>
+      An experimental project of 
+      <a href="http://fernandoguillen.info">Fernando Guillen</a>.
+    </p>
+  </footer>
+</body>
+</html>
